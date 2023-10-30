@@ -13,15 +13,16 @@ namespace KMS1_06_LE_03_02
                 string inputUser = Console.ReadLine();
                 try
                 {
-                    if (inputUser == "5" || inputUser == "10" || inputUser == "5.0" || inputUser == "10.0")
+                    if (inputUser == "0,10" || inputUser == "0,20" || inputUser == "0,50" || inputUser == "1" ||
+                        inputUser == "2" || inputUser == "5" || inputUser == "10")
                     {
                         value = Convert.ToDouble(inputUser);
                         checkInput = true;
-                        Console.WriteLine($"Sie haben {value} Euro Guthaben\n");
+                        Console.WriteLine($"Sie haben {value} Euro eingeworfen\n");
                     }
                     else
                     {
-                        Console.WriteLine("Bitte nur 5 oder 10 Euroscheine hinzufügen!");
+                        Console.WriteLine("Bitte nur 0,10, 0,20, 0,50, 1, 2, 5 oder 10 Münzen/Euroscheine hinzufügen!");
                     }
 
                 }
@@ -31,6 +32,12 @@ namespace KMS1_06_LE_03_02
                 }
             }
             return value;
+        }
+
+        public static string GetInput(string input)
+        {
+            Console.Write(input);
+            return Console.ReadLine();
         }
         public static int GetIntInput(string input)
         {
@@ -62,8 +69,3 @@ namespace KMS1_06_LE_03_02
 }
 
 
-
-
-    
-
-    
